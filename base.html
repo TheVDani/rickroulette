@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+          background-image: url('backgroundrick.jpg');
+        }
+        </style>
+<body>
+    <head>
+    <script type="text/javascript">
+    ImageArray = new Array();
+    ImageArray[0] = 'roll1.png';
+    ImageArray[1] = 'roll2.png';
+    ImageArray[2] = 'roll3.png';
+    ImageArray[3] = 'roll4.png';
+    ImageArray[4] = 'roll5.png';
+    ImageArray[5] = 'roll6.png';
+
+
+function getRandomImage() {
+    var num = Math.floor( Math.random() * 6);
+    var img = ImageArray[num];
+    document.getElementById("randImage").innerHTML = ('<img src="' + 'images/random/' + img + '" width="250px">')
+
+}
+</script>
+
+</head>
+<h1 align="center">Rickroll Roulette v.1</h1>
+<p align="center"><button onclick="getRandomImage()">Go!</button></p>
+<p align="center"><div id="randImage" align="center"></div></p>
+</body>
